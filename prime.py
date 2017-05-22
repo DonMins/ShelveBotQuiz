@@ -9,6 +9,9 @@ def inventing(comp):
     if (que % 2 == 0):
         que += 1;
     return que
+
+
+
 def isprime(que):
     limit = int(math.sqrt((que)))
     i = 3
@@ -18,17 +21,3 @@ def isprime(que):
         i += 1
     return 'True'
 
-def guessing(que):
-         #from Choosing import incscore
-         #from Choosing import getscore
-
-         check = isprime(que)
-         print('Is {} prime? True/False'.format(que))
-         guess = input()
-         if( check == str(guess) ):
-             return True
-             #incscore()
-             #print('Correct! Your score now:', getscore())
-         else:
-             return False
-             #print("Incorrect:(, Your score is still", getscore())

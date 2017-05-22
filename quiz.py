@@ -19,16 +19,15 @@ def generate(comp):
         s += random.choice(seq)
         iter += 1
 
-    s += str(random.randint(0, 10 ** (1 + comp)));
+    s += str(random.randint(1, 10 ** (1 + comp)));
     print(s)
     return s
-    a = eval(s);
 
 def count(s, guess):
       a = eval(s);
       guess = int(guess)
       print(a)
-      if(abs(guess - a) < 0.001):
+      if(abs(guess - a) < 0.01):
           return True
           #incscore()
          # print('Correct! Your score now:', getscore())
