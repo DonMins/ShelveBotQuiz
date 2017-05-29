@@ -1,11 +1,15 @@
 import random
 #import quiz
 #import  prime
+import shelve
+
+db = shelve.open("C:/Users/Opsymonroe/PycharmProjects/wikidata/testshelve")
+for keys in db:
+    print(db.get(keys))
 
 
 
-
-
+"""
 def choose():
     score = 0
     from quiz import count
@@ -32,7 +36,5 @@ def choose():
             score = 0
 
          print("Wanna try again? Y / N")
-         exitflag = input()
+         exitflag = input("""
 
-
-choose()

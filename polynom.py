@@ -1,22 +1,12 @@
 import math
 import random
 
+from shelvetry import setans
 
-class Polynom:
-    def __init__(self, a, b, c):
-        self.a = a
-        self.b = b
-        self.z = c
-
-
-pol = Polynom(1, 1, 1)
-def creating(diff):
+def creating(id, diff):
     z = random.randint(1, 10**int(diff))
-    pol.z = z
     a = random.randint(1, 10 ** int(diff))
-    pol.a = a
     b = random.randint(1, 10 ** int(diff))
-    pol.b = b
     if(z == 1):
         s = 'x^2'
     else:
@@ -29,10 +19,11 @@ def creating(diff):
         s += str(a*b*z)
     else:
         s += ('+' + str(a * b * z))
-
+    mult(a, b, id)
     return s
 
-def mult(task):
-    return pol.a * pol.b
+def mult(a, b, id):
+    setans(id, 2, (a*b))
+    #return pol.a * pol.b
 
 

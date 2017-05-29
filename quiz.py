@@ -6,9 +6,9 @@ import random
 #from Choosing import incscore
 #from Choosing import getscore
 
+from shelvetry import setans
 
-
-def generate(comp):
+def generate(id, comp):
     comp = int(comp)
     s = ''
     i = random.randint(2, 2 + int(comp))
@@ -20,19 +20,20 @@ def generate(comp):
         iter += 1
 
     s += str(random.randint(1, 10 ** (1 + comp)));
-    print(s)
+    count(id, s)
     return s
 
-def count(s, guess):
+def count(id, s):
       a = eval(s);
-      guess = int(guess)
-      print(a)
-      if(abs(guess - a) < 0.01):
-          return True
+      setans(id, 0, "{0:.2f}".format(a))
+      return
+      #guess = int(guess)
+      #if(abs(guess - a) < 0.01):
+          #return True
           #incscore()
          # print('Correct! Your score now:', getscore())
-      else:
-          return False
+      #else:
+          #return False
           #print("Incorrect:(, Your score is still", getscore())
       #print(a)
 
